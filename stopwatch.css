@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	margin:5px;
+	border: 1px solid rgba(255,255,255,0.5);
+	border-radius:10px;
+	
+	background-image:url('bg.gif');
+	background-repeat:repeat;
+	
+	font-size:100%;
+}
+.spacer
+{
+	position:relative;
+	padding:0;
+	margin:0;
+	border:none;
+	width:100%;
+	height:100%;	
+}
+.container
+{
+	position:absolute;
+	
+	width:715px;
+	height:180px;
+	padding:10px;
+	
+	border-radius:10px;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.4) inset;
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.4) inset;
+	
+	background-color:#f0f0f0;        	
+	
+	overflow:hidden;
+	cursor:default;
+}
+.numbers
+{
+	position:absolute;
+				
+	color:#1E90FF;
+	
+	font-family:trebuchet ms;
+	font-size:200px;
+	line-height:180px;
+	
+	-webkit-transition: top 0.5s;
+	-o-transition: top 0.5s;
+	-moz-transition: top 0.5s;
+}
+.controls
+{
+	position:absolute;
+	width:120px;
+	padding:5px;
+	overflow:hidden;
+	
+	color:White;
+	background-color: transparent;
+	
+	font-family:verdana;
+	font-size:1.5em;
+	font-weight:bold;
+	text-align:center;
+	text-transform:uppercase;
+	
+	cursor:pointer;
+	
+	border-radius:20px;
+	border:solid 10px rgba(255,255,255,0.7);           
+	
+	-webkit-transition: background-color 1s;
+	-o-transition:  background-color 1s;
+	-moz-transition: background-color 1s;
+}
+#startButton:hover, #stopButton:hover
+{
+	background-color: rgba(30,144,255,0.6);
+}
+#stopwatch
+{
+	border-radius:20px 0px 0px 20px;;
+	border-left:solid 10px rgba(255,255,255,0.7);
+	border-right:none;
+	border-top:solid 10px rgba(255,255,255,0.7);
+	border-bottom:solid 10px rgba(255,255,255,0.7);
+	
+	width:200px;	
+	background-color: rgba(30,144,255,0.6);
+}
+#timer
+{
+	border-radius:0px 20px 20px 0px;
+	border-left:none;
+	border-right:solid 10px rgba(255,255,255,0.7);
+	border-top:solid 10px rgba(255,255,255,0.7);
+	border-bottom:solid 10px rgba(255,255,255,0.7);
+				
+	width:200px;  
+}
+.nav
+{
+	position: absolute;       		
+	padding:2px;
+	
+	color:White;
+	background-color:#1E90FF;
+	
+	font-size:16px;
+	text-align:center;
+	
+	cursor:pointer;
+	
+	border-radius:10px;
+	
+	visibility:hidden;
+}
+.links
+{
+	position:absolute;
+	padding:10px;
+	
+	font-family:Verdana;
+	font-size:12px;
+	text-transform:uppercase;		
+}
+.links a
+{
+	text-decoration:none;
+	color:rgba(255,255,255,0.7);	
+}
+.links a:hover
+{
+	text-decoration:underline;	
+}
