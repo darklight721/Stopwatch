@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Stop Watch</title>
+    <title>Stopwatch | Timer</title>
     <script type="text/javascript" src="stopwatch.js"></script>    
     <link rel="stylesheet" href="stopwatch.css" />
 </head>
@@ -23,7 +23,14 @@
     <div id="arrowUpMin" class="nav" onClick="myNameSpace.arrowClicked(minutes,true)">&#9650;</div>
     <div id="arrowDownSec" class="nav" onClick="myNameSpace.arrowClicked(seconds,false)">&#9660;</div>
     <div id="arrowUpSec" class="nav" onClick="myNameSpace.arrowClicked(seconds,true)">&#9650;</div>
-    <div id="links" class="links"><a href="http://www.royevansia.com" target="_blank">www.royevansia.com</a></div>
+    <div class="title">A simple stopwatch and countdown timer.</div>
+    <div id="about" class="about" onMouseOver="myNameSpace.aboutOver()" onMouseOut="myNameSpace.aboutOut()">i</div>
+    <div id="links" class="links"><a href="http://www.royevansia.com" target="_blank">www.royevansia.com</a> | <img  src="twitter_newbird_white.png" height="12px" alt="Twitter" onClick="window.location='http://twitter.com/pr00t'" /></div>
+    <audio id="alarm" preload="auto">
+    	<source src="alarm.mp3" type="audio/mp3" />
+        <source src="alarm.wav" type="audio/wav" />
+    	Your browser does not support HTML5 audio
+    </audio>
 </div>
 </body>
 </html>

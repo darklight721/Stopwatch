@@ -47,6 +47,7 @@ myNameSpace = function(){
 		positionArrows(minutes,arrowUpMin,arrowDownMin);
 		positionArrows(seconds,arrowUpSec,arrowDownSec);
 		
+		positionAbout(about);
 		positionLinks(links);
 	}
 	
@@ -88,6 +89,7 @@ myNameSpace = function(){
 							}
 							else
 							{
+								alarm.play();
 								minutes.style.top = minutes.offsetTop - lineHeight + "px";
 							}							
 						}
@@ -122,6 +124,8 @@ myNameSpace = function(){
 								hourTime--;
 								if (hourTime == -1)
 								{
+									// sound the alarm
+									alarm.play();
 									resetTime();
 								}
 								else
@@ -180,7 +184,7 @@ myNameSpace = function(){
 	
 	function stopWatchClicked()
 	{
-		stopwatch.style.backgroundColor = "rgba(30,144,255,0.6)";
+		stopwatch.style.backgroundColor = "rgba(30,144,255,0.7)";
 		timer.style.backgroundColor = "transparent";
 		
 		isStopwatch = true;
@@ -191,7 +195,7 @@ myNameSpace = function(){
 	function timerClicked()
 	{
 		stopwatch.style.backgroundColor = "transparent";
-		timer.style.backgroundColor = "rgba(30,144,255,0.6)";
+		timer.style.backgroundColor = "rgba(30,144,255,0.7)";
 		
 		// resetTime() doesnt reset the set timer, so we have to manually reset it.
 		secTimer = 0;
@@ -250,6 +254,20 @@ myNameSpace = function(){
 			}				
 		}		
 		hook.style.top = offsetY + "px";
+	}
+	
+	function aboutOver()
+	{
+		about.innerHTML = "Works best on Chrome, Safari and Firefox.<br>Also works on Opera and iOS/Android devices.<br>Screw internet explorer!!!<br><br>Made by Roy Evan Sia<br>Using javascript, css(3) and a bit of html5";		
+		about.className = "about aboutOver";
+		positionAbout(about);
+	}
+	
+	function aboutOut()
+	{
+		about.innerHTML = "i";
+		about.className = "about";
+		positionAbout(about);	
 	}
 	
 	// End of Public functions ************************************************************************************
@@ -311,8 +329,8 @@ myNameSpace = function(){
 	
 	function positionControls(start,stop)
 	{
-		start.style.top = container.offsetTop + container.offsetHeight + 40 + "px";
-		stop.style.top = container.offsetTop + container.offsetHeight + 40 + "px";
+		start.style.top = container.offsetTop + container.offsetHeight + 35 + "px";
+		stop.style.top = container.offsetTop + container.offsetHeight + 35 + "px";
 		
 		start.style.left = window.innerWidth / 2 - 10 - start.offsetWidth + "px";
 		stop.style.left = window.innerWidth / 2 + 10 + "px";
@@ -332,6 +350,13 @@ myNameSpace = function(){
 	function positionLinks(links)
 	{
 		links.style.top = window.innerHeight - 10 - links.offsetHeight + "px";	
+		links.style.left = window.innerWidth - 10 - links.offsetWidth + "px";
+	}
+	
+	function positionAbout(about)
+	{
+		about.style.top = "10px";
+		about.style.left = 	window.innerWidth - 20 - about.offsetWidth + "px";
 	}
 	
 	function showArrows(isShow)
@@ -363,7 +388,9 @@ myNameSpace = function(){
 		resetTime: resetTime,
 		stopWatchClicked: stopWatchClicked,
 		timerClicked: timerClicked,
-		arrowClicked: arrowClicked
+		arrowClicked: arrowClicked,
+		aboutOver: aboutOver,
+		aboutOut: aboutOut
 	}
 
 }();
