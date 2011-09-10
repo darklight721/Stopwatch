@@ -7,7 +7,7 @@ body
 	border: 1px solid rgba(255,255,255,0.5);
 	border-radius:10px;
 	
-	background-image:url('bg.png');
+	background-image:url('res/bg.png');
 	background-repeat:repeat;
 	
 	font-size:100%;
