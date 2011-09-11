@@ -27,14 +27,19 @@ myNameSpace = function(){
 	// Public functions ******************************************************************************************
 	
 	function init()
-	{              
+	{
+		// in iPad, the background image, when rendered, is kinda sucky, so change it to just a backgroundcolor
+		doIpadBackground();
+		              
 		generateNumbers(hours,24);
 		generateNumbers(minutes,60);
 		generateNumbers(seconds,60);
 		
 		setContainerSize();
 		positionNumbers();  
-		onResizeWindow();         
+		onResizeWindow();     
+		
+		body.style.opacity = "1";    
 	}
 	
 	function onResizeWindow()
@@ -271,6 +276,14 @@ myNameSpace = function(){
 	}
 	
 	// End of Public functions ************************************************************************************
+	
+	function doIpadBackground()
+	{
+		if (navigator.userAgent.indexOf('iPad') != -1)	
+		{
+			body.className = "ipadBody";
+		}
+	}
 	
 	function saveTimer()
 	{

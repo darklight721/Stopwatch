@@ -10,7 +10,18 @@ body
 	background-image:url('res/bg.png');
 	background-repeat:repeat;
 	
+	opacity:0;
+	
+	-webkit-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	
 	font-size:100%;
+}
+.ipadBody
+{
+	background-image:none;
+	background-color:#62B1FF;	
 }
 .spacer
 {
