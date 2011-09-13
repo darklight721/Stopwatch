@@ -1,4 +1,4 @@
-<html manifest="stopwatch.manifest">
+<html manifest="manifest.dat">
 <head>
     <title>Stopwatch | Timer</title>
     <meta name="viewport" content="user-scalable=no">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="stopwatch.css" />
 </head>
 <body id="body" onLoad="myNameSpace.init()" onResize="myNameSpace.onResizeWindow()">
-<div class="spacer">
+<div class="spacer" onclick="">
     <div id="container" class="container">
         <div id="hours" class="numbers"></div>
         <div id="sep1" class="numbers">:</div>
@@ -35,7 +35,7 @@
     <div id="about" class="about" onMouseOver="myNameSpace.aboutOver()" onMouseOut="myNameSpace.aboutOut()">i</div>
     <div id="links" class="links"><a href="http://www.royevansia.com" target="_blank">www.royevansia.com</a> | <img  src="res/twitter_newbird_white.png" height="12px" alt="Twitter" onClick="window.location='http://twitter.com/pr00t'" /></div>
     <audio id="alarm" preload="auto">
-    	<source src="res/alarm.mp3" type="audio/mp3" />
+    	<source src="res/alarm.aac" type="audio/aac" />
         <source src="res/alarm.wav" type="audio/wav" />
     	Your browser does not support HTML5 audio
     </audio>
